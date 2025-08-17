@@ -1,0 +1,134 @@
+/* RESET */
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+}
+
+/* HEADER */
+header {
+  display: flex; justify-content: space-between; align-items: center;
+  background: rgb(209, 79, 46); color: white;
+  padding: 15px 30px;
+  position: sticky; top: 0;
+}
+header .logo { font-size: 1.5em; font-weight: bold; }
+header .logo span { color: hsl(0, 0%, 0%); }
+nav ul { list-style: none; display: flex; gap: 20px; }
+nav a { text-decoration: none; color: white; font-weight: bold; transition: 0.3s; }
+nav a:hover { color: rgb(37, 36, 37); transform: scale(1.1); }
+
+/* HERO */
+  .hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background-image: url("arreglos.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* 👇 esta línea hace que el fondo quede fijo */
+  background-attachment: fixed;
+
+  color: white;
+  position: relative;
+}
+/* 👇 Un “filtro oscuro” para que el texto se lea bien */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* sombra */
+  z-index: 1;
+}
+
+/* 👇 El texto siempre encima del fondo */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* 👇 Botoncito */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: turquoise;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: rgb(37, 36, 37);
+  transform: scale(1.1);
+}
+.hero h1 { font-size: 2.5em; margin-bottom: 10px; }
+.hero p { margin-bottom: 20px; }
+.btn {
+  background: rgb(209, 79, 46); color: #ffffff;
+  padding: 12px 25px; border-radius: 5px;
+  text-decoration: none; transition: 0.3s;
+}
+.btn:hover { background: color(51.09% 49.68 45.22) ; }
+
+/* SECCIONES */
+section { padding: 60px 20px; text-align: center; }
+h2 { margin-bottom: 30px; font-size: 2em; color: rgb(209, 79, 46); }
+
+/* SERVICIOS */
+.servicios .cards {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.servicios .card {
+  background: hsl(0, 0%, 100%); padding: 20px;
+  border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4) ;
+  transition: 0.3s;
+}
+.servicios .card:hover { transform: translateY(-5px); background: rgb(209, 79, 46); }
+
+
+/* TESTIMONIOS */
+.testimonios .cards {
+  display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;
+}
+.testimonios .card {
+  background: #fefefe; padding: 20px;
+  border-left: 5px solid rgb(209, 79, 46);
+  width: 250px; border-radius: 5px;
+  font-style: italic;
+}
+
+/* CONTACTO */
+.contacto form {
+  max-width: 500px; margin: auto;
+  display: flex; flex-direction: column; gap: 15px;
+}
+.contacto input, .contacto textarea {
+  padding: 12px; border: 1px solid #ccc; border-radius: 5px;
+}
+.contacto button {
+  background: rgb(209, 79, 46); color: white;
+  border: none; padding: 12px; border-radius: 5px;
+  cursor: pointer; transition: 0.3s;
+}
+.contacto button:hover { background: rgb(234, 239, 108); }
+
+/* FOOTER */
+footer {
+  background: rgb(209, 79, 46); color: rgb(37, 37, 36);
+  padding: 20px; text-align: center;
+}
+footer a { color:; text-decoration: none; }
